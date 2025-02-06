@@ -1,45 +1,54 @@
 @media(max-width: 600px) {
-    .profile-grid {
-      grid-template-columns: 1fr; /* Stack on phones */
-    }
+  .profile-grid {
+    grid-template-columns: 1fr; /* Stack on phones */
   }
-  
-  .sidebar {
-    background: linear-gradient(to right, #FF6B6B, #4ECDC4);
-  }
-  
-  .post:hover {
-    box-shadow: 0 0 15px #FD019C;
-    transform: scale(1.05);
-  }
+}
 
-  .dark-mode {
-    background-color: #0B093A;
-    color: black;
-  }  
-  
-  body {
-    background: white;
-  }
+.sidebar {
+  background: linear-gradient(to right, #FF6B6B, #4ECDC4);
+}
 
-  header {
-    position: sticky;
-    top: 0;
-    padding: 10px 16px;
-    background: #010f5ead;
-    color: #f1f1f1;
+.post:hover {
+  box-shadow: 0 0 15px #FD019C;
+  transform: scale(1.05);
+}
+
+.dark-mode {
+  background-color: #0B093A;
+  color: black;
+  border-color: black;
+}  
+
+body {
+  background: white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  background: #010f5ead;
+  color: #f1f1f1;
 }
 footer { 
-    text-align: center;
-    position: sticky;
-    bottom: 0;
-    padding: 10px 16px;
-    background: #010f5ead;
-    color: #f1f1f1;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  padding: 10px 16px;
+  background: #010f5ead;
+  color: #f1f1f1;
 }
 h1, h2, h3, h4, h5, h6, p {
-    text-align: center;
+  text-align: center;
 }
 h1{
-    animation: bounce 2s infinite;
+  animation: 2s infinite;
+}
+img{
+  border-radius: 25px;
+align: center;
+}
+
+.container{
+  flex-direction: column;
 }
