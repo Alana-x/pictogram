@@ -9,7 +9,7 @@
 }
 
 .post:hover {
-  box-shadow: 0 0 15px #FD019C;
+  box-shadow: 0 0 15px #010f5ead;
   transform: scale(1.05);
 }
 
@@ -21,6 +21,7 @@
 
 body {
   background: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -46,9 +47,41 @@ h1{
 }
 img{
   border-radius: 25px;
-align: center;
+align-content: center;
 }
 
 .container{
   flex-direction: column;
+}
+
+.dark-mode {
+  background: black;
+  color: white;
+}
+
+.dark-mode .sidebar {
+  background: #333;
+}
+
+.dark-mode .post {
+  background: #444;
+  color: white
+}
+
+.dark-mode .profile-grid{
+  background: #111;
+}
+
+.dark-mode footer{
+  background: #2B302F;
+   opacity: 0.5;
+}
+
+.dark-mode header{
+  background: #2B302F;
+     opacity: 0.5;
+}
+
+.dark-mode{
+  transition: background 0.5s, color 0.5s;
 }
