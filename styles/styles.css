@@ -47,6 +47,272 @@ h1{
 }
 img{
   border-radius: 25px;
+  align-items: center;
+}
+
+.container{
+  flex-direction: column;
+}
+
+.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+.dark-mode .sidebar {
+  background: #2C2C2C;
+}
+
+.dark-mode .post {
+  background: #333;
+  color: white
+}
+
+.dark-mode .profile-grid{
+  background: #111;
+}
+
+.dark-mode footer{
+  background: #222;
+   opacity: 0.5;
+}
+
+.dark-mode header{
+  background: #2B302F;
+     opacity: 0.5;
+}
+
+.dark-mode button{
+  background: #070D2D;
+}
+ 
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+/* Flex items (stat-item) */
+.stat-item {
+    text-align: center;
+    margin: 10px; 
+    margin-bottom: 20px; /* Adds some space between rows */
+    flex-basis: 45%; /* Adjusts width of each item */
+}
+
+.stat-item p {
+    margin: 50px 0;
+}
+
+.stat-item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.number {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar {
+    display: flex; /* Create a flexible container */
+    align-items: center; /* Vertically align items */
+    padding: 20px; /* Add some padding around the container */
+    color: #000000; /*image container color*/ 
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.profile-image {
+    margin-right: 20px; /* Space between the image and the text */
+    Border-radius: 100%;
+  }
+  
+.profile-info h2 {
+    margin: 0; /* Remove margin from the header */
+    font-size: 24px; /* Font size for the username */
+  }
+  
+.profile-info p {
+    margin: 5px 0; /* Space out the paragraphs */
+    font-size: 16px; /* Font size for the profile details */
+}
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* Basic styling for the button */
+.follow-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #BCE0F0;  /* Initial color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the button when it's in 'following' state */
+.following {
+  background-color: grey; /* Grey color after following */
+}
+
+.follow-btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/*centering the button within its container*/
+.button-container {
+  display: flex; 
+  justify-content: center; /*horizontally cdenter the button*/
+  align-items:center; /*vertically center botton*/
+  height: 100%; /*use 100% of containers height*/
+}
+
+/* styles.css */
+
+body {
+    transition: background 0.5s ease; /* Smooth background transition */
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #BCE0F0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #006f8e;
+}
+
+/* Background change button on the right side */
+.background-button {
+  position: fixed;
+  top: 10%;
+  right: 10px;
+  background-color: #007bff;
+  color: black;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 100; /* Ensures it's on top of other content */
+}
+
+/* Background change options */
+.background-options {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: auto;
+  max-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  z-index: 5;
+}
+
+.background-options.show {
+  display: block;
+}
+
+.background-option {
+  cursor: pointer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.background-option:hover {
+  background-color: #ddd;
+}
+
+/* Background styles */
+.pink {
+  background-color: pink;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.azul {
+  background-color: #0066cc;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.puppy {
+  background-image: url("https://t3.ftcdn.net/jpg/05/12/01/76/360_F_512017699_JT8ufUFIfGF2jBzLbOpAcTsmR1oATkPf.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.phoenix {
+  background-image: url('https://img.freepik.com/premium-photo/abstract-background-design-images-wallpaper-ai-generated_643360-84166.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.dragon {
+  background-image: url('https://media.istockphoto.com/id/2150886080/vector/colorful-shattered-glitch-shapes-explosion.jpg?s=612x612&w=0&k=20&c=gmhFxULsFatybmpY-ecl8YJ1MKXlyzg-0Wa8fe5CUCA=');
+  background-size: cover;
+  background-position: center;
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  background: #010f5ead;
+  color: #f1f1f1;
+}
+footer { 
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  padding: 10px 16px;
+  background: #010f5ead;
+  color: #f1f1f1;
+}
+h1, h2, h3, h4, h5, h6, p {
+  text-align: center;
+}
+h1{
+  animation: 2s infinite;
+}
+img{
+  border-radius: 25px;
 align-content: center;
 }
 

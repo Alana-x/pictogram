@@ -1,0 +1,286 @@
+<html>
+  <head>
+    <header>
+    </header>
+    <style>
+      /* Basic styling for the gallery */
+      .art-gallery {
+        column-count: 7; /* 7 columns per row */
+        column-gap: 15px; /* Space between columns */
+        padding: 15px;
+      }
+
+      .art-gallery .art {
+        display: block;
+        margin-bottom: 15px; /* Space between items */
+        break-inside: avoid; /* Prevent images from splitting across columns */
+        padding: 0; /* Remove any extra padding */
+      }
+
+      .art-gallery img {
+        width: 100%; /* Make images fill their container */
+        height: auto; /* Maintain the aspect ratio */
+        border-radius: 5px; /* Optional: Adds rounded corners to images */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for effect */
+        transition: transform 0.3s ease; /* Optional: Smooth hover effect */
+      }
+
+      .art-gallery img:hover {
+        transform: scale(1.05); /* Optional: Slightly enlarge image on hover */
+      }
+
+      .buttons-container {
+        margin: 20px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%; /* Ensure the container takes up full width */
+      }
+
+      .buttons {
+        display: flex;
+        overflow-x: hidden; /* Hide the scrollbar */
+        white-space: nowrap;
+        padding: 10px 0;
+      }
+
+      .filter-btn {
+        margin: 0 10px; /* Add space between buttons */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50; /* Button background */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .filter-btn:hover {
+        background-color: #45a049; /* Button hover effect */
+      }
+
+      .scroll-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        color: #171719;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%; /* Make the buttons circular */
+        display: none; /* Initially hide the buttons */
+      }
+
+      .scroll-button-left {
+        left: 10px; /* Position the left button */
+      }
+
+      .scroll-button-right {
+        right: 10px; /* Position the right button */
+      }
+
+      /* Show the scroll buttons only when hovering over the buttons container */
+      .buttons-container:hover .scroll-button {
+        display: block; /* Display buttons when hovering over the container */
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="buttons-container">
+      <!-- Scroll left button -->
+      <button class="scroll-button scroll-button-left" onclick="scrollButtons('left')">&#8249;</button>
+
+      <div class="buttons">
+        <button class="filter-btn" data-animal="cow">Cows</button>
+        <button class="filter-btn" data-animal="lion">Lions</button>
+        <button class="filter-btn" data-animal="dog">Dogs</button>
+        <button class="filter-btn" data-animal="panda">Pandas</button>
+        <button class="filter-btn" data-animal="snake">Snakes</button>
+        <button class="filter-btn" data-animal="bunny">Bunnies</button>
+        <button class="filter-btn" data-animal="penguin">Penguins</button>
+        <button class="filter-btn" data-animal="kitty">Kitties</button>
+        <button class="filter-btn" data-animal="duck">Ducks</button>
+        <button class="filter-btn" data-animal="dino">Dinos</button>
+        <button class="filter-btn" data-animal="deer">Deers</button>
+        <button class="filter-btn" data-animal="otter">Otters</button>
+        <button class="filter-btn" data-animal="shark">Sharks</button>
+        <button class="filter-btn" data-animal="horse">Horses</button>
+        <button class="filter-btn" data-animal="wolf">Wolves</button>
+        <button class="filter-btn" data-animal="jellyfish">Jellyfish</button>
+        <button class="filter-btn" data-animal="cat">Cats</button>
+        <button class="filter-btn" data-animal="fish">Fish</button>
+        <button class="filter-btn" data-animal="cerberus">Cerberus</button>
+        <button class="filter-btn" data-animal="owl">Owls</button>
+        <button class="filter-btn" data-animal="goat">Goats</button>
+      </div>
+
+      <!-- Scroll right button -->
+      <button class="scroll-button scroll-button-right" onclick="scrollButtons('right')">&#8250;</button>
+    </div>
+
+    <div class="art-gallery">
+      <!-- Cow Art -->
+      <div class="art cow">
+        <img src="https://i.pinimg.com/736x/94/78/a0/9478a0936c81409d0d9d073b9019b58d.jpg" alt="Cow Sketch 1">
+      </div>
+      <div class="art cow">
+        <img src="https://i.pinimg.com/736x/ff/5c/1e/ff5c1e8575c7d510a0a3404c55ca92bf.jpg" alt="Cow Sketch 2">
+      </div>
+      <div class="art cow">
+        <img src="https://i.pinimg.com/736x/bb/83/e9/bb83e99aa056ba37da2d6de43603e896.jpg" alt="Cow Sketch">
+      </div>
+
+      <!-- Lion Art -->
+      <div class="art lion">
+        <img src="https://i.pinimg.com/736x/51/1b/5e/511b5e2730d8845a6505e4aee7f5f811.jpg" alt="Lion Sketch 1">
+      </div>
+      <div class="art lion">
+        <img src="https://i.pinimg.com/736x/08/13/1e/08131e86b9dcb057a7cbe94a8d89a668.jpg" alt="Lion Sketch 2">
+      </div>
+
+      <!-- Dog Art -->
+      <div class="art dog">
+        <img src="https://i.pinimg.com/736x/e4/03/aa/e403aa1745cf6c9ff3a7e671cd073b0b.jpg" alt="Dog Sketch 1">
+      </div>
+      <div class="art dog">
+        <img src="https://i.pinimg.com/736x/97/b8/7e/97b87e63697dd8e6a4a6ebf28067333f.jpg" alt="Dog">
+      </div>
+
+      <!-- Panda Art -->
+      <div class="art panda">
+        <img src="https://i.pinimg.com/474x/a4/42/66/a442668096a9a957dede9b35a9192a42.jpg" alt="Panda">
+      </div>
+
+      <!-- Snake Art -->
+      <div class="art snake">
+        <img src="https://i.pinimg.com/474x/dc/36/c4/dc36c419f6b63c9121ba8f93d8805973.jpg" alt="Snake">
+      </div>
+
+      <!-- Capybara Art -->
+      <div class="art capybara">
+        <img src="https://i.pinimg.com/474x/6f/be/58/6fbe58762e5320bb23829a2df0bfe9fb.jpg" alt="Capybara">
+      </div>
+
+      <!-- Bunny Art -->
+      <div class="art bunny">
+        <img src="https://i.pinimg.com/474x/7e/08/fd/7e08fd0a937aed71ff7ff435913d39bf.jpg" alt="Bunny">
+      </div>
+      <div class="art bunny">
+        <img src="https://i.pinimg.com/474x/2e/0d/6f/2e0d6f77363ba0256d6f3f331a16c690.jpg" alt="Bunny">
+      </div>
+      <div class="art bunny">
+        <img src="https://i.pinimg.com/474x/7c/e3/8b/7ce38b964fc9ed91d1538adc798803ef.jpg" alt="Bunny">
+      </div>
+      <div class="art bunny">
+        <img src="https://i.pinimg.com/474x/32/68/84/32688403f6cc0eb64dc2483f8968b3ef.jpg" alt="Bunny">
+      </div>
+
+      <!-- Penguin Art -->
+      <div class="art penguin">
+        <img src="https://i.pinimg.com/474x/29/30/e1/2930e18592876f59cd7ae8be4c992d7b.jpg" alt="Penguin">
+      </div>
+
+      <!-- Kitty Art -->
+      <div class="art kitty">
+        <img src="https://i.pinimg.com/474x/34/14/2a/34142a760f520cd32e1803b4bd9fccd4.jpg" alt="Kitty">
+      </div>
+      <div class="art kitty">
+        <img src="https://i.pinimg.com/474x/32/68/84/32688403f6cc0eb64dc2483f8968b3ef.jpg" alt="Kitty">
+      </div>
+
+      <!-- Duck Art -->
+      <div class="art duck">
+        <img src="https://i.pinimg.com/474x/b1/de/36/b1de36389570a4aa6d706ae447bd3c80.jpg" alt="Duck">
+      </div>
+      <div class="art duck">
+        <img src="https://i.pinimg.com/474x/76/0d/04/760d04e935a62aee129efe492339671a.jpg" alt="Duck">
+      </div>
+
+      <!-- Dino Art -->
+      <div class="art dino">
+        <img src="https://i.pinimg.com/474x/2c/5d/07/2c5d07032edb638b8e96c536e17dd960.jpg" alt="Dino">
+      </div>
+      <!-- Deer Art -->
+      <div class="art deer">
+        <img src="https://i.pinimg.com/474x/9a/ff/50/9aff50a40408d464d3d6908d41bbbcb3.jpg" alt="Deer">
+      </div>
+      <div class="art deer">
+        <img src="https://i.pinimg.com/474x/2c/5d/07/2c5d07032edb638b8e96c536e17dd960.jpg" alt="Deer">
+      </div>
+      <div class="art deer">
+        <img src="https://i.pinimg.com/474x/32/67/1b/32671bd6a08f81039f8f04ccc957389b.jpg" alt="Deer">
+      </div>
+
+      <!-- Otter Art -->
+      <div class="art otter">
+        <img src="https://i.pinimg.com/474x/08/da/c5/08dac5a7d5e72cb655bcbaa71d63b80c.jpg" alt="Otter">
+      </div>
+      <div class="art otter">
+        <img src="https://i.pinimg.com/474x/78/ba/68/78ba68ebb0c2d88427f85b189a79bb41.jpg" alt="Otter">
+      </div>
+
+      <!-- Shark Art -->
+      <div class="art shark">
+        <img src="https://i.pinimg.com/474x/2c/3e/57/2c3e57e4e73ed9e3966875b7a5e01797.jpg" alt="Shark">
+      </div>
+      <div class="art shark">
+        <img src="https://i.pinimg.com/474x/14/9e/85/149e85337d903c1e1edb08dd0c12ebba.jpg" alt="Shark">
+      </div>
+      <div class="art shark">
+        <img src="https://i.pinimg.com/474x/0f/00/05/0f0005c39f93c399c9f0e9da1f1ddf94.jpg" alt="Shark">
+      </div>
+
+      <!-- Horse Art -->
+      <div class="art horse">
+        <img src="https://i.pinimg.com/474x/f3/b1/0c/f3b10cce253dd53202fda348638456c5.jpg" alt="Horse">
+      </div>
+
+      <!-- Wolf Art -->
+      <div class="art wolf">
+        <img src="https://i.pinimg.com/474x/24/8f/52/248f526aed7b5da5f8450efa61380df1.jpg" alt="Wolf">
+      </div>
+      <div class="art wolf">
+        <img src="https://i.pinimg.com/474x/b6/f2/f4/b6f2f4ba59c1adff60c2cb80e210a510.jpg" alt="Wolf">
+      </div>
+
+      <!-- Jellyfish Art -->
+      <div class="art jellyfish">
+        <img src="https://i.pinimg.com/474x/b3/a1/6a/b3a16a214954fa27240860e2cdcedf33.jpg" alt="Jellyfish">
+      </div>
+
+      <!-- Cat Art -->
+      <div class="art cat">
+        <img src="https://i.pinimg.com/474x/05/78/8b/05788b7fb9f2105d1fc172a33b475992.jpg" alt="Cat">
+      </div>
+
+      <!-- Fish Art -->
+      <div class="art fish">
+        <img src="https://i.pinimg.com/474x/c3/31/8a/c3318aa37d4e7615b0c61684db0b1df8.jpg" alt="Fish">
+      </div>
+
+      <!-- Cerberus Art -->
+      <div class="art cerberus">
+        <img src="https://i.pinimg.com/474x/0d/e6/eb/0de6ebdaabe1a62e15b43dc3a063fd53.jpg" alt="Cerberus">
+      </div>
+
+      <!-- Owl Art -->
+      <div class="art owl">
+        <img src="https://i.pinimg.com/474x/55/90/e7/5590e70e2535ca06a4d7b568af22f82f.jpg" alt="Owl">
+      </div>
+
+      <!-- Goat Art -->
+      <div class="art goat">
+        <img src="https://i.pinimg.com/474x/78/60/07/786007b09b3a7a99bd252e5672d187c8.jpg" alt="Goat">
+      </div>
+    </div>
+
+  </body>
+  <footer>
+  </footer>
+</html>
