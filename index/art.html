@@ -1,0 +1,169 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles/art.css">
+    <header>
+    </header>
+    <style>
+      /* Basic styling for the gallery */
+      .art-gallery {
+        column-count: 7; /* 7 columns per row */
+        column-gap: 15px; /* Space between columns */
+        padding: 15px;
+      }
+
+      .art-gallery .art {
+        display: block;
+        margin-bottom: 15px; /* Space between items */
+        break-inside: avoid; /* Prevent images from splitting across columns */
+        padding: 0; /* Remove any extra padding */
+      }
+
+      .art-gallery img {
+        width: 100%; /* Make images fill their container */
+        height: auto; /* Maintain the aspect ratio */
+        border-radius: 5px; /* Optional: Adds rounded corners to images */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for effect */
+        transition: transform 0.3s ease; /* Optional: Smooth hover effect */
+      }
+
+      .art-gallery img:hover {
+        transform: scale(1.05); /* Optional: Slightly enlarge image on hover */
+      }
+
+      .buttons-container {
+        margin: 20px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%; /* Ensure the container takes up full width */
+      }
+
+      .buttons {
+        display: flex;
+        overflow-x: hidden; /* Hide the scrollbar */
+        white-space: nowrap;
+        padding: 10px 0;
+      }
+
+      .filter-btn {
+        margin: 0 10px; /* Add space between buttons */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50; /* Button background */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .filter-btn:hover {
+        background-color: #45a049; /* Button hover effect */
+      }
+
+      .scroll-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        color: #171719;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%; /* Make the buttons circular */
+        display: none; /* Initially hide the buttons */
+      }
+
+      .scroll-button-left {
+        left: 10px; /* Position the left button */
+      }
+
+      .scroll-button-right {
+        right: 10px; /* Position the right button */
+      }
+
+      /* Show the scroll buttons only when hovering over the buttons container */
+      .buttons-container:hover .scroll-button {
+        display: block; /* Display buttons when hovering over the container */
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="buttons-container">
+      <!-- Scroll left button -->
+      <button class="scroll-button scroll-button-left" onclick="scrollButtons('left')">&#8249;</button>
+
+      <div class="buttons">
+        <button class="filter-btn" data-animal="eyes">Eyes</button>
+        <button class="filter-btn" data-animal="clothes">Clothes</button>
+        <button class="filter-btn" data-animal="mouths">Mouths</button>
+        <button class="filter-btn" data-animal="hand">Hands</button>
+        <button class="filter-btn" data-animal="body">Bodies</button>
+        <button class="filter-btn" data-animal="facial">Facial Expressions</button>
+        <button class="filter-btn" data-animal="hair">Hair</button>
+        <button class="filter-btn" data-animal="pose">Poses</button>
+        <button class="filter-btn" data-animal="sketch">Sketches</button>
+        <button class="filter-btn" data-animal="drawing">Drawings</button>
+        <button class="filter-btn" data-animal="doodle">Doodles</button>
+        <button class="filter-btn" data-animal="tutorial">Tutorials</button>
+        <button class="filter-btn" data-animal="realistic">Realistic</button>
+        <button class="filter-btn" data-animal="simple">Simple</button>
+        <button class="filter-btn" data-animal="creative">Creative</button>
+        <button class="filter-btn" data-animal="tattoo">tattoo</button>
+        <button class="filter-btn" data-animal="objects">Objects</button>
+        <button class="filter-btn" data-animal="food">Food</button>
+        <button class="filter-btn" data-animal="flowers">Flowers</button>
+        <button class="filter-btn" data-animal="scary">Scary</button>
+        <button class="filter-btn" data-animal="pride">Pride art</button>
+      </div>
+
+      <!-- Scroll right button -->
+      <button class="scroll-button scroll-button-right" onclick="scrollButtons('right')">&#8250;</button>
+    </div>
+
+    <div class="art-gallery">
+         <!-- Eye Art -->
+      <div class="art eyes">
+        <img src=https://i.pinimg.com/474x/7f/62/41/7f6241db35b34699de3fbe19377a30ff.jpg> </div> <div class="art eyes">
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+         <!--  -->
+      <div class="art ">
+        <img src=> </div> 
+        </div>
+        </div>
+        <script src="/scripts/art.js"></script>
+  </body>
+  <footer>
+
+  </footer>
+</html>

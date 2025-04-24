@@ -171,7 +171,7 @@ img{
 /*centering the button within its container*/
 .button-container {
   display: flex; 
-  justify-content: center; /*horizontally cdenter the button*/
+  justify-content: space-between; /*horizontally cdenter the button*/
   align-items:center; /*vertically center botton*/
   height: 100%; /*use 100% of containers height*/
 }
@@ -351,3 +351,5 @@ align-content: center;
 .dark-mode{
   transition: background 0.5s, color 0.5s;
 }
+
+.

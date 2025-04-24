@@ -65,3 +65,6 @@ options.forEach(option => {
     backgroundButton.innerHTML = 'Choose Background &#8595;'; // Reset button text
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  // your whole code goes here
+});
