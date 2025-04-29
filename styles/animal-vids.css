@@ -1,0 +1,61 @@
+      /* Basic styling for the page */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Container for the header and search bar */
+      .header {
+        background-color: #171719;
+        padding: 20px;
+        color: white;
+        text-align: center;
+      }
+
+      /* Search bar */
+      .search-bar {
+        width: 60%;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      /* Layout for the video container */
+      .video-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        gap: 15px;
+      }
+
+      /* Individual video item styling */
+      .video-item {
+        width: 350px;
+        text-align: center;
+      }
+
+      .video-item iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+      }
+
+      .description {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      /* Styling for the single column layout */
+      .single-column {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+  

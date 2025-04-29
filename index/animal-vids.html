@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/styles/animal-vids.css"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scary Compilation Videos</title>
+    
+  </head>
+  <body>
+    <!-- Header Section with Search Bar -->
+    <div class="header">
+      <h1>Scary Compilation Videos</h1>
+      <input
+        type="text"
+        id="search-bar"
+        class="search-bar"
+        placeholder="Search for scary videos..."
+        oninput="filterVideos()"
+      />
+    </div>
+
+    <!-- Video Container -->
+    <div id="video-container" class="video-columns">
+      <!-- Video 1 -->
+      <div class="video-item" data-keywords="haunted houses scary">
+        <iframe
+          src="https://www.youtube.com/embed/diCYrjb-ZD0"
+          title="Scary Compilation - Haunted Houses"
+          allowfullscreen></iframe>
+        <div class="description"><p>13 Scary Videos That Will</p>Haunted houses with eerie encounters. Creepy and spine-chilling!</div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-item" data-keywords="creepy moments scary">
+        <iframe
+          src="https://www.youtube.com/embed/V4p-IQTM5vc"
+          title="Scary Compilation - Creepy Moments Caught on Camera"
+          allowfullscreen></iframe>
+        <div class="description"><p>7 Scary Videos That'll Make</p>A compilation of creepy moments that will make you jump!</div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-item" data-keywords="ghosts paranormal">
+        <iframe
+          src="https://www.youtube.com/embed/CFV7Xjs_240"
+          title="Scary Compilation - Ghosts Caught on Tape"
+          allowfullscreen></iframe>
+        <div class="description"><p>Top 100 Scariest Videos of</p>Ghost sightings caught on tape! Will leave you wondering...</div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-item" data-keywords="unsolved mysteries creepy">
+        <iframe
+          src=""
+          title="Scary Compilation - Creepy Unsolved Mysteries"
+          allowfullscreen></iframe>
+        <div class="description"><p>Scary Comp. 2021</p>Chilling unsolved mysteries and unexplained events.</div>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="video-item" data-keywords="scary encounters woods">
+        <iframe
+          src=""
+          title="Scary Compilation - Scary Encounters in the Woods"
+          allowfullscreen></iframe>
+        <div class="description"><p>Scary Comp. V46</p>
+          Terrifying encounters in the woods that will leave you on edge!</div>
+      </div>
+    </div>
+    <script src="/scripts/animal-vids.js"></script>
+  </body>
+</html>

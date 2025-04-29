@@ -1,0 +1,73 @@
+/* Basic styling for the gallery */
+.art-gallery {
+    column-count: 7; /* 7 columns per row */
+    column-gap: 15px; /* Space between columns */
+    padding: 15px;
+  }
+
+  .art-gallery .art {
+    display: block;
+    margin-bottom: 15px; /* Space between items */
+    break-inside: avoid; /* Prevent images from splitting across columns */
+    padding: 0; /* Remove any extra padding */
+  }
+
+  .art-gallery img {
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px; /* Optional: Adds rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for effect */
+    transition: transform 0.3s ease; /* Optional: Smooth hover effect */
+  }
+
+  .art-gallery img:hover {
+    transform: scale(1.05); /* Optional: Slightly enlarge image on hover */
+  }
+
+  .buttons {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .buttons .filter-btn {
+    margin: 0 10px; /* Add space between buttons */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #010f5ead; /* Button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .buttons .filter-btn:hover {
+    background-color: #45a049; /* Button hover effect */
+  }
+
+.scroll-button {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: white; /* Set the background color to white */
+color: black; /* Set the icon color to black for visibility */
+border: none;
+padding: 15px;
+cursor: pointer;
+z-index: 10;
+border-radius: 50%; /* Make the buttons circular */
+display: none; /* Initially hide the buttons */
+transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.scroll-button:hover {
+background-color: #f0f0f0; /* Slight hover effect for the buttons */
+}
+
+.scroll-button-left {
+left: 10px; /* Position the left button */
+}
+
+.scroll-button-right {
+right: 10px; /* Position the right button */
+}
