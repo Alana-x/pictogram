@@ -1,61 +1,124 @@
-      /* Basic styling for the page */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-      /* Container for the header and search bar */
-      .header {
-        background-color: #171719;
-        padding: 20px;
-        color: white;
-        text-align: center;
-      }
+body {
+  font-family: 'Creepster', cursive, sans-serif;
+  background-color: #1a1a1a; /* Dark background for the spooky vibe */
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('/images/foggy-bg.jpg'); /* Eerie foggy background */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-      /* Search bar */
-      .search-bar {
-        width: 60%;
-        padding: 10px;
-        font-size: 16px;
-        margin-top: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-      }
+/* Header with dark, ominous theme */
+.header {
+  background-color: #111; /* Dark theme header */
+  padding: 40px 20px;
+  color: #ff3d00; /* Red text for a scary effect */
+  text-align: center;
+  border-bottom: 5px solid #ff5722; /* Fiery red border for intensity */
+}
 
-      /* Layout for the video container */
-      .video-columns {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px;
-        gap: 15px;
-      }
+.header h1 {
+  font-size: 3em;
+  text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.5); /* Scary glowing red shadow */
+}
 
-      /* Individual video item styling */
-      .video-item {
-        width: 350px;
-        text-align: center;
-      }
+/* Search bar with dark theme */
+.search-bar {
+  width: 60%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 2px solid #f44336; /* Red border for a chilling look */
+  background-color: #333;
+  color: #fff;
+  transition: all 0.3s ease;
+}
 
-      .video-item iframe {
-        width: 100%;
-        height: 200px;
-        border: none;
-      }
+.search-bar:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 8px #ff5722;
+}
 
-      .description {
-        margin-top: 10px;
-        font-size: 14px;
-        color: #333;
-      }
+/* Video layout */
+.video-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  gap: 25px;
+}
 
-      /* Styling for the single column layout */
-      .single-column {
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-  
+/* Video cards with shadowy effects */
+.video-item {
+  width: 340px;
+  background-color: #222; /* Dark video card */
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Dark shadow for eerie effect */
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Add spooky red "blood" effect on hover */
+.video-item:hover::before {
+  content: "🩸"; /* Blood drop */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #ff0000;
+}
+
+/* Video iframe */
+.video-item iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Description box */
+.description {
+  padding: 15px;
+  font-size: 15px;
+  color: #f1f1f1;
+  background-color: #333; /* Dark background for descriptions */
+  text-align: left;
+  border-top: 2px solid #ff5722; /* Red border to match the theme */
+}
+
+.description .video-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #ff5722; /* Red title text */
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #b0bec5; /* Light gray text for easy reading */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}

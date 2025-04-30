@@ -1,61 +1,114 @@
-      /* Basic styling for the page */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
 
-      /* Container for the header and search bar */
-      .header {
-        background-color: #171719;
-        padding: 20px;
-        color: white;
-        text-align: center;
-      }
+body {
+  font-family: 'Baloo 2', cursive, sans-serif;
+  background-color: #fff; /* White background to match the base */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('/images/subtle-paws-bg.png'); /* Optional subtle paw background */
+  background-repeat: repeat;
+  background-size: 100px;
+}
 
-      /* Search bar */
-      .search-bar {
-        width: 60%;
-        padding: 10px;
-        font-size: 16px;
-        margin-top: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-      }
+/* Header with dark blue background */
+.header {
+  background-color: #010f5e; /* Dark blue to match base website header */
+  padding: 40px 20px;
+  color: #f1f1f1; /* Light color for contrast */
+  text-align: center;
+  border-bottom: 5px solid #0d47a1; /* Light blue accent border */
+  background-image: url('/images/animal-paw-bg.png'); /* Optional paw background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-      /* Layout for the video container */
-      .video-columns {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px;
-        gap: 15px;
-      }
+.header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #ffffff; /* Slight text shadow for readability */
+}
 
-      /* Individual video item styling */
-      .video-item {
-        width: 350px;
-        text-align: center;
-      }
+/* Search bar styling with blue accents */
+.search-bar {
+  width: 60%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 2px solid #2196f3; /* Soft blue border */
+  background-color: #ffffff;
+  color: #333;
+  transition: all 0.3s ease;
+}
 
-      .video-item iframe {
-        width: 100%;
-        height: 200px;
-        border: none;
-      }
+.search-bar:focus {
+  border-color: #0d47a1; /* Dark blue on focus to match header */
+  box-shadow: 0 0 8px #2196f3; /* Blue shadow on focus */
+}
 
-      .description {
-        margin-top: 10px;
-        font-size: 14px;
-        color: #333;
-      }
+/* Video layout */
+.video-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  gap: 25px;
+}
 
-      /* Styling for the single column layout */
-      .single-column {
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-  
+/* Video cards */
+.video-item {
+  width: 340px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.video-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Paw overlay (optional) */
+.video-item::before {
+  content: "🐾";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 22px;
+  color: #2196f3; /* Blue paw print to match the theme */
+}
+
+/* Video iframe */
+.video-item iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+/* Description box with soft blue background */
+.description {
+  padding: 15px;
+  font-size: 15px;
+  color: #2e2e2e;
+  background-color: #e3f2fd; /* Soft light blue background for description */
+  text-align: left;
+}
+
+.description p {
+  font-weight: bold;
+  color: #0d47a1; /* Dark blue text for bold descriptions */
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+/* Single column layout */
+.single-column {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}

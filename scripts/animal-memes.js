@@ -68,3 +68,16 @@ filterButtons.forEach(button => {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const gallery = document.querySelector('.art-gallery');
+  const items = Array.from(gallery.children);
+
+  // Shuffle function
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+
+  // Append shuffled items back into the container
+  items.forEach(item => gallery.appendChild(item));
+});

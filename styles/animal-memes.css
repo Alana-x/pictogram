@@ -42,7 +42,7 @@
   }
 
   .buttons .filter-btn:hover {
-    background-color: #45a049; /* Button hover effect */
+    background-color: #010f5e; /* Button hover effect */
   }
 
 .scroll-button {
@@ -71,3 +71,87 @@ left: 10px; /* Position the left button */
 .scroll-button-right {
 right: 10px; /* Position the right button */
 }
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #171719;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* Make the buttons circular */
+  display: none; /* Initially hide the buttons */
+}
+
+.scroll-button-left {
+  left: 10px; /* Position the left button */
+}
+
+.scroll-button-right {
+  right: 10px; /* Position the right button */
+}
+
+/* Show the scroll buttons only when hovering over the buttons container */
+.buttons-container:hover .scroll-button {
+  display: block; /* Display buttons when hovering over the container */
+}
+      /* Basic styling for the gallery */
+      .art-gallery {
+        column-count: 7; /* 7 columns per row */
+        column-gap: 15px; /* Space between columns */
+        padding: 15px;
+      }
+
+      .art-gallery .art {
+        display: block;
+        margin-bottom: 15px; /* Space between items */
+        break-inside: avoid; /* Prevent images from splitting across columns */
+        padding: 0; /* Remove any extra padding */
+      }
+
+      .art-gallery img {
+        width: 100%; /* Make images fill their container */
+        height: auto; /* Maintain the aspect ratio */
+        border-radius: 5px; /* Optional: Adds rounded corners to images */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for effect */
+        transition: transform 0.3s ease; /* Optional: Smooth hover effect */
+      }
+
+      .art-gallery img:hover {
+        transform: scale(1.05); /* Optional: Slightly enlarge image on hover */
+      }
+
+      .buttons-container {
+        margin: 20px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%; /* Ensure the container takes up full width */
+      }
+
+      .buttons {
+        display: flex;
+        overflow-x: hidden; /* Hide the scrollbar */
+        white-space: nowrap;
+        padding: 10px 0;
+      }
+
+      .filter-btn {
+        margin: 0 10px; /* Add space between buttons */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #010f5e; /* Button background */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .filter-btn:hover {
+        background-color: #010f5e; /* Button hover effect */
+      }
